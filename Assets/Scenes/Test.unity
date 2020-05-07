@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingWeapons:
-  - {fileID: 4221230597034462104, guid: 42875ba62d4774349aaefdd570f247f7, type: 3}
+  - {fileID: 4221230597034462104, guid: e2693a59d8cc1ba4c8f8c4b34f65b301, type: 3}
   weaponRoot: {fileID: 1263902752}
   FPSWeaponLayer:
     serializedVersion: 2
