@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
     public float gravityDownAcceleration = 0;
     public float radius = 0.01f;
     public float impactVFXLifetime = 5f;
+    public float damage = 30f;
 
 
     public GameObject owner { get; private set; }
@@ -102,7 +103,14 @@ public class Projectile : MonoBehaviour
         {
             Destroy(impactVFXInstance.gameObject, impactVFXLifetime);
         }
+        Damageable damageable = collider.GetComponent<Damageable>();
+        if (damageable)
+        {
+            damageable.InflictDamage(damage, owner);
+        }
 
         Destroy(this.gameObject);
     }
+
+
 }

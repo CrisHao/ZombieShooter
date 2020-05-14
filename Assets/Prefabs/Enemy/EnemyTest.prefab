@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1169978239433503800}
   - component: {fileID: 6877465290866663126}
+  - component: {fileID: 4472446920803946099}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +46,18 @@ CapsuleCollider:
   m_Height: 1.43
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4472446920803946099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409841874063734954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f273d15bb47cf43970473998231204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4550086692068808614
 GameObject:
   m_ObjectHideFlags: 0
@@ -54,6 +67,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8149015513251459411}
+  - component: {fileID: 4300719871343692535}
+  - component: {fileID: 9008018129688399856}
   m_Layer: 0
   m_Name: EnemyTest
   m_TagString: Untagged
@@ -77,6 +92,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4300719871343692535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550086692068808614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0f6f76b5afbce49a7bb1316428b1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &9008018129688399856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550086692068808614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff8abd39b85f9b46850935487f9a4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathDuration: 1
 --- !u!1001 &835811426625968065
 PrefabInstance:
   m_ObjectHideFlags: 0
