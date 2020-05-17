@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     public float maxHealth = 10f;
+    public Image healthBarImage;
+    public Transform healthBarPivot;
 
     //Event
     public UnityAction<float, GameObject> onDamaged;
@@ -16,6 +19,8 @@ public class Health : MonoBehaviour
     public bool invincible { get; set; }
 
     bool m_IsDead;
+    bool hideFullHealthBar = true;
+
 
     void Start()
     {
@@ -54,5 +59,18 @@ public class Health : MonoBehaviour
                 onDie.Invoke();
             }
         }
+    }
+
+    void Update()
+    {
+        // update health bar value
+        healthBarImage.fillAmount = currentHealth / maxHealth;
+
+        // rotate health bar to face the camera/player
+        //healthBarPivot.LookAt(-Camera.main.transform.position);
+
+        // hide health bar if needed
+        //if (hideFullHealthBar)
+        //    healthBarPivot.gameObject.SetActive(healthBarImage.fillAmount != 1);
     }
 }

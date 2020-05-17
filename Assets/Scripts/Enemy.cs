@@ -26,6 +26,11 @@ public class Enemy : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Damaged Event 
+    /// </summary>
+    /// <param name="damage">damager number</param>
+    /// <param name="damageSource">damage Source</param>
     void OnDamaged(float damage, GameObject damageSource)
     {
         // test if the damage source is the player
